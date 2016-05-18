@@ -1,0 +1,70 @@
+<section class="ask--answer" style="border-top: 2px solid #efefef;">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="row center-xs middle-xs">
+        <h1>پرسش و پاسخ</h1>
+      </div>
+      <a href="#send--ask" class="send--ask-button">ارسال سوال</a>
+      <h3>سوال های پاسخ داده شده: </h3>
+      <div class="ask--gruop col-xs-12">
+        <div class="ask--body">
+          <p>
+            متن سوال:
+          </p>
+          <p>
+            پاسخ ما:
+          </p>
+        </div>
+        <div class="ask--body">
+          <p>
+            متن سوال:
+          </p>
+          <p>
+            پاسخ ما:
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="send--ask" class="send--message">
+  <div class="container">
+    <div class="col-xs-12">
+      <div class="row center-xs">
+        <h1>ارسال سوال</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="row center-xs">
+            <form action="https://formspree.io/eslami.amir76@gmail.com" role="from" method="POST">
+              <div class="form-group">
+                <label for="name">نام شما:</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="_replyto">آدرس ایمیل شما:</label>
+                <input type="email" name="_replyto" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="ـsubject">موضوع سوال:</label>
+                <input type="text" name="ـsubject" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">متن سوال:</label>
+                <textarea name="message" width="100%" required></textarea>
+              </div>
+
+              <div class="form-send">
+                <input type="hidden" name="_next" value="//mahdi-khademi.github.io/thanks.html">
+                <input type="submit" class="button--send" value="ارسال پیام">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

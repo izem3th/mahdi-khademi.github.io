@@ -1,0 +1,319 @@
+// index PAGE:
+// =========
+
+html {
+	font-family: $font-regular, Lato, Droid Sans, Helvetica, sans-serif;
+	direction: $direction;
+	line-height: $line-height;
+	text-rendering: optimizeLegibility;
+	@include font-smoothing();
+	letter-spacing: -.025rem;
+	word-spacing: -.05rem;
+}
+body {
+	background: $c-white;
+	background-size: cover;
+	color: $c-dark;
+}
+* {
+	box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: $c-dark;
+    &:hover {
+    	color: $color-hover;
+    }
+}
+::selection {
+    background: #444;
+    color: #fff;
+    text-shadow: none;
+}
+picture {
+	display: block;
+	line-height: 0;
+}
+img, iframe {
+	max-width: 100%;
+	margin: 0 auto;
+}
+ul {
+	list-style-type: none;
+	li {
+		&::before, &::after{
+			content: '';
+			display: inline-block;
+		}
+	}
+}
+
+.fixed {
+	position: fixed;
+}
+.container {
+	display: block;
+	max-width: 100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+.Header { height: 4.3em; }
+.Header--links {
+	> ul {
+		display: flex;
+	}
+	> ul > li {
+		padding: 0.222em;
+		margin: 0 0.122em;
+		font-family: $font-regular;
+		font-size: 0.899em;
+		&::after {
+			width: 5px;
+			height: 5px;
+			margin-right: 0.8em;
+			background: $c-blue;
+			@include border-radius(100%);
+			vertical-align: middle;
+		}
+		a:hover {
+			color: $c-blue;
+		}
+	}
+}
+.center--content {
+	padding: 0 !important;
+  height: 500px;
+	// &::before {
+	// 	content: "";
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	margin: auto;
+	// 	background: rgba(0,0,0,0.5);
+	// }
+}
+.center--content_img {
+	height: 100%;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url('/dist/img/Laywer.jpg');
+	filter: grayscale(1);
+}
+.content--litter_img {
+	float: right;
+	margin-top: 58px;
+	figure {
+		position: relative;
+		width: 350px;
+		height: 350px;
+		background-image: url('/dist/img/people.jpg');
+		background-size: cover;
+		background-position: center;
+		@include border-radius(10px);
+	}
+}
+.content--litter_txt {
+	position: relative;
+	float: right;
+	top: 10em;
+	width: 28em;
+	color: $c-white;
+
+	h1 {
+		background: rgba(0,0,0,0.8);
+		padding: 0.4em 0.5em;
+		width: 10.5em;
+	}
+
+	p {
+		background: rgba(0,0,0,0.8);
+		padding: 0.2em;
+	}
+}
+.about--we {
+	padding: 2em 0;
+	h1, i {
+		color: $c-blue;
+	}
+	.about--dots {
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		background: lighten($c-dark, 50%);
+		margin-top: 10px;
+		@include border-radius(100%);
+		margin-bottom: 1em;
+
+		&::after, &::before {
+			content: '';
+			display: block;
+			vertical-align: middle;
+			position: relative;
+			width: 5px;
+			height: 5px;
+			background: lighten($c-dark, 50%);
+			@include border-radius(100%);
+		}
+		&::after {
+			top: -5px;
+			left: -20px;
+		}
+		&::before {
+			right: -20px;
+		}
+	}
+}
+.what-we-do {
+	padding: 2em 0;
+	color: $c-dark;
+	border-top: 2px solid darken($c-white, 10%);
+	border-bottom: 2px solid darken($c-white, 10%);
+	h1 {
+		line-height: $line-height + 1;
+		color: $c-blue;
+	}
+
+	.what-title {}
+}
+
+.contact--us {
+	padding: 2em 0;
+	h1 {
+		color: $c-blue;
+	}
+	.contact--dots {
+		display: inline-block;
+		width: 5px;
+		height: 5px;
+		background: lighten($c-dark, 50%);
+		margin-top: 10px;
+		@include border-radius(100%);
+		margin-bottom: 1em;
+
+		&::after, &::before {
+			content: '';
+			display: block;
+			vertical-align: middle;
+			position: relative;
+			width: 5px;
+			height: 5px;
+			background: lighten($c-dark, 50%);
+			@include border-radius(100%);
+		}
+		&::after {
+			top: -5px;
+			left: -20px;
+		}
+		&::before {
+			right: -20px;
+		}
+	}
+}
+.more--button {
+	background: darken($c-blue, 5%);
+		padding: 0.700em 2em;
+		color: $c-white;
+		@include border-radius(100px);
+		transition: all 0.1s ease-in;
+		&:hover {
+			background: darken($c-blue, 10%);
+			color: $c-white;
+		}
+}
+.Footer {
+	padding: 1em 0;
+	background: darken($c-white, 10%);
+}
+
+// Add icons
+.about--we-icon {
+	margin: 0.3em 0 0 0.5em;
+	font-size: 1.618em;
+}
+.icon-books, .icon-book, .icon-newspaper {
+	font-size: 2.118em;
+}
+.tellphone, .emailiocn{
+	position: relative;
+	top: 21px;
+	margin-left: 8px;
+}
+.locationicon {
+	position: relative;
+	top: 20px;
+	margin-left: 5px;
+}
+
+// Send Message
+.send--message {
+	padding: 2em 0;
+	border-top: 2px solid darken($c-white, 10%);
+	h1 {
+		color: $c-blue;
+	}
+}
+.form-group {
+	padding: 1em 0;
+	label {
+		float: right;
+	}
+	input, textarea {
+		clear: both;
+		float: right;
+		width: 20em;
+		padding: 0.3em;
+		margin: 0.3em 0 1em 0;
+		@include border-radius(3px);
+		border: 1px solid darken($c-white, 20%);
+	}
+}
+
+// Ask & answer
+.ask--answer {
+	padding: 2em 0;
+	h3 {
+		margin-top: 2em;
+	}
+}
+.send--ask-button {
+		position: relative;
+		top: 1em;
+		background: darken($c-blue, 5%);
+		padding: 0.700em 2em;
+		color: $c-white;
+		@include border-radius(100px);
+		transition: all 0.1s ease-in;
+		&:hover {
+			background: darken($c-blue, 10%);
+			color: $c-white;
+		}
+}
+.ask--gruop {
+	position: relative;
+	padding: 1em 0;
+	background: darken($c-white, 5%);
+	@include border-radius(3px);
+}
+.ask--body {
+	border-bottom: 3px solid $c-white;
+}
+.button--send {
+	clear: both;
+	float: right;
+	border: 0;
+	position: relative;
+	top: 1em;
+	background: darken($c-blue, 5%);
+	padding: 0.700em 2em;
+	color: $c-white;
+	@include border-radius(100px);
+	transition: all 0.1s ease-in;
+	&:hover {
+		background: darken($c-blue, 10%);
+		color: $c-white;
+	}
+}

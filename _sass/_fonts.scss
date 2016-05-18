@@ -1,0 +1,9 @@
+// Fonts:
+// =====
+
+@include font-face($font-regular,'/dist/fonts/#{$font-regular}');
+@include font-face($font-bold,'/dist/fonts/#{$font-bold}');
+@include font-icon($font-icon,'/dist/fonts/#{$font-icon}');
+
+// @import url(http://fonts.googleapis.com/css?family=Lato);
+// @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
